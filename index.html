@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início - Gustavo Dutra</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        header, footer {
+            background-color: #000;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            flex-wrap: wrap;
+            z-index: 2;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .active {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: underline;
+            color: #fff;
+            text-shadow: 0 0 10px #ffffff;
+        }
+
+        .social-icons svg {
+            width: 20px;
+            margin-left: 10px;
+        }
+
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .video-background video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: auto;
+            padding: 70px;
+            background-color: rgba(0, 0, 0, 1);
+            border-radius: 10px;
+            text-align: center;
+            width: 90%;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        .skills {
+            margin-top: 20px;
+        }
+
+        .skills h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .skills ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skills li {
+            background: #333;
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: #fff;
+            font-weight: bold;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .dark-mode-toggle {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 18px;
+            right: 10px;
+        }
+
+        body.light-mode header, 
+        body.light-mode footer {
+            background-color: #f0f0f0;
+            color: #000;
+        }
+
+        body.light-mode .logo,
+        body.light-mode a {
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .profile-picture {
+                width: 120px;
+                height: 120px;
+            }
+
+            .skills ul {
+                gap: 10px;
+            }
+
+            .skills li {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header, footer {
+                padding: 10px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            .skills h2 {
+                font-size: 1.3em;
+            }
+
+            .dark-mode-toggle {
+                padding: 10px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="Binary_Numbers_Alpha_Overlay__4K__Free_Stock_Video.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo.
+        </video>
+    </div>
+
+    <header>
+        <a href="index.html" class="active">GDP</a>
+        <nav>
+            <a href="projects.html">Projetos</a>
+            <a href="contact.html">Contato</a>
+            <a href="https://drive.google.com/file/d/1hrbL0PRPfPdFfayZ3kPY1zFIYBE2wGDH/view" target="_blank">Currículo</a>
+            <div class="social-icons">
+                <a href="https://github.com/Gustavohdutra" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="#5c5c5c" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
+                <a href="https://www.linkedin.com/in/gustavo-dutra-1857a6195/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#5c5c5c" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                <a href="https://www.instagram.com/gustavohdutra_/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#5c5c5c" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <img src="Imagem do WhatsApp de 2024-11-01 à(s) 13.52.08_f9e2011f.jpg" alt="Foto de Gustavo" style="width: 13%; height: 150px; border-radius: 15px;">
+        <h1>Gustavo</h1>
+        <p>Olá, sou Gustavo Dutra, programador especializado em desenvolvimento de soluções interativas. Com formação técnica em andamento no Cotemig, tenho 19 anos e uma paixão por tecnologia e criação de experiências digitais, especialmente no desenvolvimento de jogos.</p>
+    
+        <p>Minha trajetória inclui projetos focados em simulações e desafios de lógica, onde aplico habilidades analíticas para criar experiências únicas. Valorizo o trabalho em equipe, resiliência e o aprendizado constante, buscando sempre aprimorar minhas capacidades e expandir meu conhecimento.</p>
+        
+        <p>Este portfólio reflete meu compromisso e dedicação à área de TI. Estou aberto a novas oportunidades e colaborações que tragam desafios e crescimento.</p>
+        
+        <div class="skills">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Desenvolvimento Web</li>
+                <li>JavaScript</li>
+                <li>HTML & CSS</li>
+                <li>Design Responsivo</li>
+                <li>C#</li>
+                <li>Banco de Dados</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Política de Privacidade  Política de Cookies  © 2024 por Gustavo Dutra.</p>
+        <button class="dark-mode-toggle" id="darkModeToggle">🌙</button>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        const savedMode = localStorage.getItem('darkMode');
+        if (savedMode === 'light') {
+            body.classList.add('light-mode');
+        }
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            if (body.classList.contains('light-mode')) {
+                localStorage.setItem('darkMode', 'light');
+            } else {
+                localStorage.removeItem('darkMode');
+            }
+        });
+    </script>
+
+</body>
+</html>
